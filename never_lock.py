@@ -3,8 +3,23 @@ import pyautogui
 import _thread
 from time import sleep
 
+"""
+NeverLock: The Virtual Drinking Bird
+------------------------------------
+NeverLock is a Python app that keeps your desktop from going to 
+sleep by periodically pressing keys. This effectively disables 
+auto-lock, screensavers, power-save sleep timers, and usually 
+keeps you active in chat apps. It is written using Python 3 and 
+requries the pyautogui package. For more information see the 
+documentation as https://github.com/mptsolutions/NeverLock
+"""
 class NeverLock:
     def __init__(self, run_options):
+        """
+        Initialization of the class will attempt to get command-line
+        arguments and then start the the key_press function in a new
+        thread.
+        """
         self.parse_args(run_options)
         if self.help:
             self.display_help()
@@ -20,6 +35,9 @@ class NeverLock:
             self.display_finished()
 
     def parse_args(self, options):
+        """
+        Function to parse command-line arguments.
+        """
         self.move_frequency_minutes = 5
         self.stop_timer_minutes = 'unlimited'
         self.help = False
@@ -33,6 +51,9 @@ class NeverLock:
                 self.help = True
 
     def key_press(self):
+        """
+        Function to press keys at specified intervals
+        """
         pyautogui.FAILSAFE = True
         try:
             while True:
@@ -43,6 +64,9 @@ class NeverLock:
             pass
 
     def display_title(self):
+        """
+        Function to display main title
+        """
         title = 'NeverLock: The Virtual Drinking Bird'
         print('*'*50)
         print('*** ' + title, end='')
@@ -50,6 +74,9 @@ class NeverLock:
         print('*'*50)
         
     def display_help(self):
+        """
+        Function to display help menu
+        """
         self.display_title()
         usage_title_line = 'Usage Options:'
         help_line = '-h: Show the help screen.'
@@ -67,6 +94,9 @@ class NeverLock:
         sys.exit(0)
 
     def display_info(self):
+        """
+        Function to display run info
+        """
         self.display_title()
         move_freq_line = 'Click Frequency: ' + str(self.move_frequency_minutes) + ' minutes.'
         run_timer_line = 'Run Timer: ' + str(self.stop_timer_minutes) + ' minutes.'
@@ -77,12 +107,18 @@ class NeverLock:
         print('*'*50)
     
     def display_stop(self):
+        """
+        Function to display 'stop' message
+        """
         stop_line = 'Press [enter] to stop.'
         print('*** ' + stop_line, end='')
         print(' '*(43-len(stop_line)) + '***')
         print('*'*50)
 
     def display_finished(self):
+        """
+        Function to display 'finished' message
+        """
         finish_line = 'NeverLock has finished.'
         print('*'*50)
         print('*** ' + finish_line, end='')
