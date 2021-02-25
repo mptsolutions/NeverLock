@@ -16,11 +16,11 @@ pip install pyautogui
 ```
 
 ## **Operation** 
-The entire app is contained in the single ```never_look.py``` file, so it can be run as any other basic Python script. 
+The entire app is contained in the single ```never_lock.py``` file, so it can be run as any other basic Python script. 
 ```
 D:\PythonProjects\NeverLock> python never_lock.py
 ```
-At specific intervals, NeverLock will press the ```volume down``` key and then the ```volume up``` key.  These keys have been chosen because they work on most systems and ensure that no open applications are affected. You can leave **NeverLock** running even while you are using the computer and it should not have any affect on what you are doing. Note that on some systems a volume adjustment notification will appear on the screen. Once running, **NeverLock** will display its current settings.  Press the ```enter``` key to stop it.
+At specific intervals, **NeverLock** will press the ```volume down``` key and then the ```volume up``` key.  These keys have been chosen because they work on most systems and ensure that no open applications are affected. You can leave **NeverLock** running even while you are using the computer and it should not have any affect on what you are doing. Note that on some systems a volume adjustment notification will appear on the screen when **NeverLock** activates. Once running, **NeverLock** will display its current settings.  Press the ```enter``` key to stop it.
 ```
 **************************************************
 *** NeverLock: The Virtual Drinking Bird       ***
