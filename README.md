@@ -17,7 +17,9 @@ pip install pyautogui
 
 ## **Operation** 
 The entire app is contained in the single ```never_look.py``` file, so it can be run as any other basic Python script. 
-```D:\PythonProjects\NeverLock> python never_lock.py```
+```
+D:\PythonProjects\NeverLock> python never_lock.py
+```
 At specific intervals, NeverLock will press the ```volume down``` key and then the ```volume up``` key.  These keys have been chosen because they work on most systems and ensure that no open applications are affected. You can leave **NeverLock** running even while you are using the computer and it should not have any affect on what you are doing. Note that on some systems a volume adjustment notification will appear on the screen. Once running, **NeverLock** will display its current settings.  Press the ```enter``` key to stop it.
 ```
 **************************************************
@@ -33,7 +35,9 @@ At specific intervals, NeverLock will press the ```volume down``` key and then t
 ## **Options**
 ### Help Menu
 The ```-h``` command-line argument can be used to see the available command-line options.
-```D:\PythonProjects\NeverLock> python never_lock.py -h```
+```
+D:\PythonProjects\NeverLock> python never_lock.py -h
+```
 **NeverLock** will not run when the help menu is displayed.
 ```
 *** NeverLock: The Virtual Drinking Bird       ***
@@ -47,7 +51,9 @@ The ```-h``` command-line argument can be used to see the available command-line
 
 ### Run Timer
 The ```-t``` command-line argument can be used to set the number of minutes for **NeverLock** to run.  
-```D:\PythonProjects\NeverLock> python never_lock.py -t 20```
+```
+D:\PythonProjects\NeverLock> python never_lock.py -t 20
+```
 When the specified minutes have elapsed, **NeverLock** will quit on its own.  If this argument is not supplied, **NeverLock** will run indefinitely. To stop **NeverLock** before the run timer has run out, use ```ctrl-C```.
 ```
 **************************************************
@@ -60,7 +66,9 @@ When the specified minutes have elapsed, **NeverLock** will quit on its own.  If
 
 ### Frequency
 The ```-f``` command-line argument can be used to set the number of minutes between key-presses. 
-```D:\PythonProjects\NeverLock> python never_lock.py -f 10```
+```
+D:\PythonProjects\NeverLock> python never_lock.py -f 10
+```
 If this argument is not supplied, **NeverLock** will press keys every 5 minutes.
 ```
 **************************************************
